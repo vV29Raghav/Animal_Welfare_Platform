@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - AidWings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-purple-100 text-gray-800 flex flex-col items-center justify-center min-h-screen py-10">
+    <div class="container bg-white/80 rounded-xl shadow-lg backdrop-blur-md p-8 max-w-2xl w-full text-center">
+        <h1 class="text-3xl font-semibold text-green-600 mb-6">Join as a Volunteer</h1>
+        <p class="text-gray-600 mb-8">Your support can make a significant difference in the lives of animals. Choose how you'd like to contribute:</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between items-center w-full sm:w-96 hover:shadow-lg transition-shadow duration-300">
+                <h2 class="text-xl font-semibold text-blue-600 mb-4">Donate Money</h2>
+                <p class="text-gray-700 text-center mb-4">Support our mission financially to provide essential resources for animal welfare.</p>
+                <button onclick="window.location.href='donation.html'" class="bg-gradient-to-r from-blue-400 to-purple-500 hover:from-blue-500 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md">
+                    Donate Now
+                </button>
+            </div>
+            <div class="card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between items-center w-full sm:w-96 hover:shadow-lg transition-shadow duration-300">
+                <h2 class="text-xl font-semibold text-green-600 mb-4">Volunteer Your Time</h2>
+                <p class="text-gray-700 text-center mb-4">Contribute your time and skills to directly help animals in need and support our programs.</p>
+                <button onclick="window.location.href='volunteer-form.html'" class="bg-gradient-to-r from-green-400 to-teal-500 hover:from-green-500 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md">
+                    Volunteer Now
+                </button>
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <p class="text-gray-600 text-sm">Every contribution, big or small, helps us make a difference.</p>
+        </div>
+    </div>
+</body>
+</html>
