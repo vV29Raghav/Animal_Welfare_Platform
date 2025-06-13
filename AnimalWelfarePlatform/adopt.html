@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPrints - Adopt a Pet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="adopt.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">AidWings</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#pet-container">About</a>
+            <a href="#pet-container">Pets</a>
+            <a href="#adoption-section">Adopt</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text" data-aos="fade-right">
+            <h1>Welcome to Our Pet Adoption</h1>
+            <p>Find your perfect furry friend and give them a loving home.</p>
+            <a href="#pet-container" class="btn">View Pets</a>
+        </div>
+        <img src="https://media.gettyimages.com/id/1322461027/photo/adopt-a-pet-dont-buy-it.jpg?s=612x612&w=0&k=20&c=0Hcp8JAdei0_qAghr6jQHtt5too7aUx3UM1R8FR8d2I=" alt="Adopt a Pet" data-aos="fade-left">
+    </section>
+
+    <!-- About Pets Section -->
+    <section class="about-pets">
+        <h2>About Our Pets</h2>
+        <p>Explore our diverse selection of adorable pets, each with their own unique personality.</p>
+        <div class="pet-container" id="pet-container">
+            <div class="pet" data-name="Buddy" data-age="2" data-reason="Owner relocating abroad." data-note="Loves cuddles and playing with toys." data-image="https://media.gettyimages.com/id/136644845/photo/brown-rescue-dog-with-adopt-me-vest.jpg?s=612x612&w=0&k=20&c=ptr9PGD1js8erzUKnmLjuuNGYid6OCGYQO13qWLpCIE=" onclick="openPopup(this)">
+                <img src="https://media.gettyimages.com/id/136644845/photo/brown-rescue-dog-with-adopt-me-vest.jpg?s=612x612&w=0&k=20&c=ptr9PGD1js8erzUKnmLjuuNGYid6OCGYQO13qWLpCIE=" alt="Buddy">
+            </div>
+            <div class="pet" data-name="Max" data-age="3" data-reason="Financial constraints." data-note="Very friendly and good with kids." data-image="https://media.istockphoto.com/id/669048074/photo/puppy-with-adopt-me-sign.jpg?s=612x612&w=0&k=20&c=lCqwxgPA7n1A4R399cvwsRpGhsLDZuaF7S_sFjgr_t4=" onclick="openPopup(this)">
+                <img src="https://media.istockphoto.com/id/669048074/photo/puppy-with-adopt-me-sign.jpg?s=612x612&w=0&k=20&c=lCqwxgPA7n1A4R399cvwsRpGhsLDZuaF7S_sFjgr_t4=" alt="Max">
+            </div>
+            <div class="pet" data-name="Bella" data-age="1" data-reason="Owner has medical issues." data-note="Active and loves outdoor walks." data-image="https://p.sharinpix.com/3/dce835c/YXBwLnNoYXJpbnBpeC5jb20vaW1hZ2VfZXh0ZXJuYWxfdXJscy84MGEwMzgxOC00MGZlLTQzZTgtOWU5Ni1kODFlMzliYzBlYzc/80a03818-40fe-43e8-9e96-d81e39bc0ec7/80a03818-40fe-43e8-9e96-d81e39bc0ec7.jpg" onclick="openPopup(this)">
+                <img src="https://p.sharinpix.com/3/dce835c/YXBwLnNoYXJpbnBpeC5jb20vaW1hZ2VfZXh0ZXJuYWxfdXJscy84MGEwMzgxOC00MGZlLTQzZTgtOWU5Ni1kODFlMzliYzBlYzc/80a03818-40fe-43e8-9e96-d81e39bc0ec7/80a03818-40fe-43e8-9e96-d81e39bc0ec7.jpg" alt="Bella">
+            </div>
+            <div class="pet" data-name="Boxer" data-age="4" data-reason="Due to age-related retirement" data-note="Boxer served bravely in many missions. He deserves a loving home for his retirement" data-image="https://i.pinimg.com/originals/b0/03/d7/b003d75e56f4f4c23b577369702c94de.jpg" onclick="openPopup(this)">
+                <img src="https://i.pinimg.com/originals/b0/03/d7/b003d75e56f4f4c23b577369702c94de.jpg" alt="Boxer">
+            </div>
+            <div class="pet" data-name="Lucy" data-age="2" data-reason="Owner has developed allergies." data-note="Playful and energetic." data-image="https://media.giphy.com/media/zxNJG5qFM4axq/giphy.gif?cid=ecf05e47fk8ov37bor0zo24dtd29zobhbe2gd49lrq19vy2u&ep=v1_gifs_search&rid=giphy.gif&ct=g" onclick="openPopup(this)">
+                <img src="https://media.giphy.com/media/zxNJG5qFM4axq/giphy.gif?cid=ecf05e47fk8ov37bor0zo24dtd29zobhbe2gd49lrq19vy2u&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Lucy">
+            </div>
+            <div class="pet" data-name="Rocky" data-age="5" data-reason="Owner can no longer care for him." data-note="Loyal and protective." data-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2Rrcm9kbHF3aWN0NTQwdzRqbjZpOHJxNnd4ejUwODVubjlxem5mcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TRc3CGrGkxl04TlhYg/giphy.gif" onclick="openPopup(this)">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2Rrcm9kbHF3aWN0NTQwdzRqbjZpOHJxNnd4ejUwODVubjlxem5mcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TRc3CGrGkxl04TlhYg/giphy.gif" alt="Rocky">
+            </div>
+            <div class="pet" data-name="Lili" data-age="1" data-reason="Owner is moving overseas" data-note="Very friendly and loves people." data-image="https://media.istockphoto.com/id/827928912/photo/portrait-of-cow-calf.jpg?s=612x612&w=0&k=20&c=NR9Ev5B3GZWjIrqqbp9RJjVtli9MNJ5U9VEZAvrIKpI=" onclick="openPopup(this)">
+                <img src="https://media.istockphoto.com/id/827928912/photo/portrait-of-cow-calf.jpg?s=612x612&w=0&k=20&c=NR9Ev5B3GZWjIrqqbp9RJjVtli9MNJ5U9VEZAvrIKpI=" alt="Lili">
+            </div>
+            <div class="pet" data-name="Leo" data-age="2" data-reason="Owner has too many pets" data-note="Calm and good-natured." data-image="https://media.istockphoto.com/id/1062547114/photo/abandoned-cat-in-cage-animal-shelter-tabby-cat.jpg?s=612x612&w=0&k=20&c=7CdoKgmKkf8NKQ1katS52aZE7jSbm54S8-IOJMDOBdg=" onclick="openPopup(this)">
+                <img src="https://media.istockphoto.com/id/1062547114/photo/abandoned-cat-in-cage-animal-shelter-tabby-cat.jpg?s=612x612&w=0&k=20&c=7CdoKgmKkf8NKQ1katS52aZE7jSbm54S8-IOJMDOBdg=" alt="Leo">
+            </div>
+            <div class="pet" data-name="Coco" data-age="3" data-reason="Owner is unable to provide proper care" data-note="Loves attention and is very affectionate." data-image="https://media.istockphoto.com/id/182772226/photo/cute-puppy.jpg?s=612x612&w=0&k=20&c=E-k9VZdGg-96z-m-QO1jilljTzB8eYJv-y8Lh6L5Lw=" onclick="openPopup(this)">
+                <img src="https://media.istockphoto.com/id/182772226/photo/cute-puppy.jpg?s=612x612&w=0&k=20&c=E-k9VZdGg-96z-m-QO1jilljTzB8eYJv-y8Lh6L5Lw=" alt="Coco">
+            </div>
+        </div>
+
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup" id="adoptPopup">
+            <div class="popup-image-container">
+                <img id="popupImage" src="img.jpg" alt="Pet Image">
+            </div>
+            <div class="popup-text-content">
+                <h3 id="petNameTitle"></h3>
+                <p><strong>Age:</strong> <span id="petAge"></span> years</p>
+                <p><strong>Owner's Note:</strong> <span id="petNote"></span></p>
+                <p>Do you want to adopt <span id="petNameConfirm"></span>?</p>
+                <button class="yes-btn" onclick="confirmAdoption()">Yes, Adopt</button>
+                <button class="no-btn" onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Filters Section -->
+    <section class="pet-filters-section">
+        <div class="container">
+            <h2>Pet Filters</h2>
+            <div class="filter-container">
+                <div class="filter-box">
+                    <h3>Species</h3>
+                    <p>Filter by your preferred animal species to find the perfect pet</p>
+                    <label for="species">Select Species</label>
+                    <select id="species" onchange="updatePetImage()">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="rabbit">Rabbit</option>
+                    </select>
+                    <button class="adopt-now" onclick="redirectToWhatsApp()">Adopt Now</button>
+                </div>
+                <div class="pet-image">
+                    <img id="pet-img" src="https://i.imgur.com/q2xzzQm.png" alt="Pet Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption FAQs Section -->
+    <section class="adoption-section" id="adoption-section">
+        <h2>Adoption FAQs</h2>
+        <p>Explore our frequently asked questions and learn more about the pet adoption process</p>
+        <div class="adoption-container">
+            <div class="adoption-card">
+                <img src="https://media.gettyimages.com/id/136644845/photo/brown-rescue-dog-with-adopt-me-vest.jpg?s=612x612&w=0&k=20&c=ptr9PGD1js8erzUKnmLjuuNGYid6OCGYQO13qWLpCIE=" alt="Colonel">
+                <h3>Colonel</h3>
+                <p>Adopt Colonel</p>
+            </div>
+            <div class="adoption-card">
+                <img src="https://media.istockphoto.com/id/528241939/photo/adopt-me.jpg?s=612x612&w=0&k=20&c=UbcTBsG_EFH2lUA6Rd0pOZaeyKeTwHGG32nJ_IPfMGc=" alt="Boxer">
+                <h3>Boxer</h3>
+                <p>Adopt Boxer</p>
+            </div>
+            <div class="adoption-card">
+                <img src="https://i.pinimg.com/originals/14/b1/23/14b1230c1a561319732443c59daf3a79.jpg" alt="Sheru">
+                <h3>Sheru</h3>
+                <p>Adopt Sheru</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="video-content">
+            <img src="https://media.giphy.com/media/cmyQOtNg6zOOyK3cRC/giphy.gif" alt="Playing Dog GIF">
+        </div>
+        <div class="left-content">
+            <h2>Testimonials</h2>
+            <h3>Happy Tails</h3>
+            <p>Heartwarming adoption experiences shared by our adopters.</p>
+            <h3>Pet Adoption Guide</h3>
+            <p>Learn about the adoption process and the necessary steps to welcome your furry friend home.</p>
+            <h3>Adoption Info</h3>
+            <p>Get insights into our adoption policies and guidelines to ensure a smooth transition for your new pet.</p>
+            <button class="whatsapp-button" onclick="redirectToWhatsApp()">Adopt Now</button>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="adopt.js"></script>
+</body>
+</html>

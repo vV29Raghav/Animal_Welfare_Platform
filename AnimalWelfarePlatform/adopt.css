@@ -1,0 +1,509 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #eaeaea;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    background: linear-gradient(to right, #fde4e4, #fff);
+}
+
+.hero img {
+    max-width: 400px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e63946;
+}
+
+/* About Pets Section */
+.about-pets h2 {
+    font-size: 2rem;
+    margin-top: 50px;
+    color: #2D3B4B;
+}
+
+.about-pets p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #6B7280;
+}
+
+.pet-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.pet {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.pet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.pet:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.pet[data-aos] {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup-image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.popup h3 {
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin: 5px 0;
+}
+
+.popup button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.yes-btn {
+    background: #28a745;
+    color: white;
+}
+
+.no-btn {
+    background: #dc3545;
+    color: white;
+}
+
+/* Pet Filters Section */
+.pet-filters-section {
+    background-color: #6e7a87;
+    color: white;
+    padding: 50px 0;
+}
+
+.pet-filters-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.filter-box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    color: black;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.filter-box p {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.adopt-now {
+    background-color: #1D3557;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pet-image {
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pet-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Adoption FAQs Section */
+.adoption-section {
+    padding: 60px 20px;
+    background-color: #F9FAFC;
+}
+
+.adoption-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.adoption-section p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.adoption-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.adoption-card {
+    background: white;
+    border-radius: 15px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.adoption-card:hover {
+    transform: translateY(-5px);
+}
+
+.adoption-card img {
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+}
+
+.adoption-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.adoption-card p {
+    font-size: 14px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #f0c3f1, #91c8e4);
+    color: #222;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 90%;
+    flex-wrap: wrap;
+}
+
+.testimonials-section .video-content,
+.testimonials-section .left-content {
+    width: 45%;
+    padding: 20px;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.testimonials-section h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.testimonials-section p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.testimonials-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.whatsapp-button {
+    background: #222;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.whatsapp-button:hover {
+    background-color: #086108;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .pet-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .adoption-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonials-section .video-content,
+    .testimonials-section .left-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials-section .video-content {
+        order: 1;
+    }
+
+    .testimonials-section .left-content {
+        order: 2;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+
+    .testimonials-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .popup-image-container {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .pet {
+        width: 150px;
+        height: 150px;
+    }
+
+    .popup {
+        padding: 15px;
+    }
+
+    .pet-container {
+        grid-template-columns: 1fr;
+    }
+}
